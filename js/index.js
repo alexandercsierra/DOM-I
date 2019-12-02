@@ -73,6 +73,50 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 
 let firstH4 = document.querySelector(".text-content h4");
-firstH4.textContent = "Features";
+firstH4.textContent = siteContent["main-content"]["features-h4"];
+
+let firstpara = document.querySelectorAll(".text-content p")[0];
+firstpara.textContent = siteContent["main-content"]["features-content"];
+
+let secondH4 = document.querySelectorAll(".text-content h4")[1];
+secondH4.textContent = siteContent["main-content"]["about-h4"];
+
+let secondPara = document.querySelectorAll(".text-content p")[1];
+secondPara.textContent = siteContent["main-content"]["about-content"];
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+let servicesTitle = document.querySelectorAll(".bottom-content .text-content h4")[0];
+servicesTitle.textContent = siteContent["main-content"]["services-h4"];
+
+let thirdPara = document.querySelectorAll(".text-content p")[2];
+thirdPara.textContent = siteContent["main-content"]["services-content"];
+
+let productTitle = document.querySelectorAll(".bottom-content .text-content h4")[1];
+productTitle.textContent = siteContent["main-content"]["product-h4"];
+
+let fourthPara = document.querySelectorAll(".text-content p")[3];
+fourthPara.textContent = siteContent["main-content"]["product-content"];
+
+let visionTitle = document.querySelectorAll(".bottom-content .text-content h4")[2];
+visionTitle.textContent = siteContent["main-content"]["vision-h4"];
+
+let fifthPara = document.querySelectorAll(".text-content p")[4];
+fifthPara.textContent = siteContent["main-content"]["vision-content"];
+
+let contact = document.querySelector(".contact h4");
+contact.textContent = siteContent.contact["contact-h4"];
+
+let address = document.querySelectorAll(".contact p")[0];
+// address.textContent = siteContent.contact.address;
+address.innerHTML = "123 Way 456 Street<br> Somewhere, USA";
+
+let phone = document.querySelectorAll(".contact p")[1];
+phone.textContent = siteContent.contact.phone;
+
+let email = document.querySelectorAll(".contact p")[2];
+email.textContent = siteContent.contact.email;
+
 
 
