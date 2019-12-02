@@ -1,7 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
 body {
   display: flex;
+  
+  
+}
+
+.container{
+  width: 80%;
+  margin: 4% auto;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: dodgerblue;
 }
 
 .digit {
@@ -11,4 +29,30 @@ body {
 
 .redDigit {
   color: red;
+}
+
+.digits{
+    /* background: blue; */
+    padding: 5%;
+    margin: 4%;
+}
+
+.btnDiv {
+  display: flex;
+  justify-content: space-between;
+  width: 48%;
+}
+
+.btnDiv button {
+  padding: 5% 10%;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.start {
+  background: green;
+}
+
+.reset {
+  background: red;
 }

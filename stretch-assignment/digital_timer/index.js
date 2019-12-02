@@ -56,6 +56,17 @@ start.addEventListener("click", e => {
 
 let reset = document.querySelector(".reset");
 reset.addEventListener("click", e => {
-    start.disabled = false;
-    // clearInterval(timer);
+    if (secondTens.style.color === "red"){
+        start.disabled = false;
+    }
+    
+    msTens.textContent = "0";
+    msHundreds.textContent = "0";
+    secondOnes.textContent = "0";
+    secondTens.textContent = "0";
+    msTens.style.color = "black";
+    msHundreds.style.color = "black";
+    secondOnes.style.color = "black";
+    secondTens.style.color = "black";
+
 });
