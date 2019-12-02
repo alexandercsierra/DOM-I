@@ -89,6 +89,49 @@ cta.innerHTML = "DOM<br> IS<br> AWESOME";
 let ctaBtn = document.querySelector(".cta-text button");
 ctaBtn.textContent = siteContent.cta.button;
 
+
+
+
+
+//STRETCH
+let topDiv = document.querySelector(".cta-text");
+let discoBtn = document.createElement("button");
+discoBtn.textContent="DISCO!";
+topDiv.appendChild(discoBtn);
+
+let body = document.querySelector("body");
+
+discoBtn.addEventListener("click", e => {
+  e.preventDefault();
+  function randomColor(){
+    let blue = "#0307fc";
+    let green = "#0cc21e";
+    let yellow = "#e5ff00";
+    let red = "#ff0000";
+
+    let colors = [blue, green, yellow, red];
+
+    body.style.backgroundColor = colors[Math.floor(Math.random() * 4)];
+
+  }
+  setInterval(function() {
+    // body.style.backgroundColor = random_rgba();
+    body.style.backgroundColor = randomColor();
+    
+  }, 500 );
+});
+
+//END STRETCH
+
+
+  
+
+
+
+
+
+
+
 let ctaImg = document.querySelector(" #cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
