@@ -7,7 +7,7 @@ let secondOnes = document.querySelector("#secondOnes");
 let secondTens = document.querySelector("#secondTens");
 
 
-
+function timer(){
 var counter = setInterval(function(){ 
     if (msTens.textContent === "-"){
         msTens.textContent = 0;
@@ -28,6 +28,10 @@ var counter = setInterval(function(){
                 secondOnes.textContent = 0;
                 if (secondTens.textContent = 1){
                     // secondTens.textContent++;
+                    msTens.style.color = "red";
+                    msHundreds.style.color = "red";
+                    secondOnes.style.color = "red";
+                    secondTens.style.color = "red";
                     clearInterval(counter);
                 } 
                 
@@ -42,3 +46,16 @@ var counter = setInterval(function(){
 
 
 }, 10);
+}
+
+let start = document.querySelector(".start");
+start.addEventListener("click", e => {
+    timer();
+    start.disabled = true;
+});
+
+let reset = document.querySelector(".reset");
+reset.addEventListener("click", e => {
+    start.disabled = false;
+    // clearInterval(timer);
+});
