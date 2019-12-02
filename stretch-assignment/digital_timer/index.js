@@ -8,7 +8,7 @@ let secondTens = document.querySelector("#secondTens");
 
 
 
-setInterval(function(){ 
+var counter = setInterval(function(){ 
     if (msTens.textContent === "-"){
         msTens.textContent = 0;
         msHundreds.textContent = 0;
@@ -26,12 +26,10 @@ setInterval(function(){
                 secondOnes.textContent++;
             } else {
                 secondOnes.textContent = 0;
-                if (secondTens.textContent < 9){
-                    secondTens.textContent++;
-                } else {
-                    secondTens.textContent = 0;
-                    
-                }
+                if (secondTens.textContent = 1){
+                    // secondTens.textContent++;
+                    clearInterval(counter);
+                } 
                 
             }
         }
