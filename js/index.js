@@ -38,5 +38,41 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+
+let link1 = document.querySelectorAll("header nav a")[0];
+let link2 = document.querySelectorAll("header nav a")[1];
+let link3 = document.querySelectorAll("header nav a")[2];
+let link4 = document.querySelectorAll("header nav a")[3];
+let link5 = document.querySelectorAll("header nav a")[4];
+let link6 = document.querySelectorAll("header nav a")[5];
+
+link1.textContent = siteContent.nav["nav-item-1"];
+link2.textContent = siteContent.nav["nav-item-2"];
+link3.textContent = siteContent.nav["nav-item-3"];
+link4.textContent = siteContent.nav["nav-item-4"];
+link5.textContent = siteContent.nav["nav-item-5"];
+link6.textContent = siteContent.nav["nav-item-6"];
+
+
+
+
+
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let cta = document.querySelector(".cta-text h1");
+cta.innerHTML = "DOM<br> IS<br> AWESOME";
+
+
+let ctaBtn = document.querySelector(".cta-text button");
+ctaBtn.textContent = siteContent.cta.button;
+
+let ctaImg = document.querySelector(" #cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+let firstH4 = document.querySelector(".text-content h4");
+firstH4.textContent = "Features";
+
+
