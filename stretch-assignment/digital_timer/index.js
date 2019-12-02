@@ -44,14 +44,6 @@ function timer(){
 
 
         } else {
-            msTens.textContent = "0";
-            msHundreds.textContent = "0";
-            secondOnes.textContent = "0";
-            secondTens.textContent = "0";
-            msTens.style.color = "black";
-            msHundreds.style.color = "black";
-            secondOnes.style.color = "black";
-            secondTens.style.color = "black";
             clearInterval(counter);
         }
     }, 10);
@@ -60,7 +52,6 @@ function timer(){
 let start = document.querySelector(".start");
 start.addEventListener("click", e => {
     isReset = false;
-    clearInterval(timer);
     timer();
     start.disabled = true;
     start.style.background = "#517355";
@@ -69,7 +60,6 @@ start.addEventListener("click", e => {
 let reset = document.querySelector(".reset");
 reset.addEventListener("click", e => {
     isReset = true;
-    clearInterval(timer);
     start.disabled = false;
     start.style.background = "#26c73e";
         
