@@ -54,6 +54,27 @@ link4.textContent = siteContent.nav["nav-item-4"];
 link5.textContent = siteContent.nav["nav-item-5"];
 link6.textContent = siteContent.nav["nav-item-6"];
 
+let navLinks = document.querySelectorAll("nav a");
+
+for (let item of navLinks){
+  item.style.color = "green";
+}
+
+let nav = document.querySelector("nav");
+
+let link = document.createElement("a");
+link.textContent = "End";
+link.style.color = "green";
+nav.appendChild(link);
+
+let link0 = document.createElement("a");
+link0.textContent = "Start";
+link0.style.color = "green";
+nav.prepend(link0);
+
+
+
+
 
 
 
@@ -118,5 +139,6 @@ phone.textContent = siteContent.contact.phone;
 let email = document.querySelectorAll(".contact p")[2];
 email.textContent = siteContent.contact.email;
 
-
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent.footer.copyright;
 
